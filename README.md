@@ -15,9 +15,9 @@
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
-# 📖 # Blog-app <a name="about-project"></a>
+# 📖 Blog-app <a name="about-project"></a>
 
-**# Blog-app** is a simple and user-friendly web application for creating and managing blog posts. The app allows users to sign up, create posts, like posts, and leave comments.
+**Blog-app** is a simple and user-friendly web application for creating and managing blog posts. The app allows users to sign up, create posts, like posts, and leave comments.
 
 
 ## 🗝️ Key Features <a name="key-features"></a>
