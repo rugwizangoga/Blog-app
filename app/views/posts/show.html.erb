@@ -1,1 +1,16 @@
-<h1>Here is post <%=@post_id %> by user <%=@user %></h1>
+<div class="bio">
+  <div class='title'>
+    <h4 class = "p-bio">Post #<%=@post.id%> by <%=@post.author.name%></h4>
+    <p>comments: <%= @post.comments_counter %>, Likes: <%= @post.likes_counter %></p>
+  </div>
+  <p class = "p-bio"><%= @post.text %></p>
+</div>
+
+<% if @post.five_most_recent_comments.any? %>
+  <div class="comments">
+    <h4 class = "p-bio">Comments</h4>
+    <% @post.five_most_recent_comments.each do |comment| %>
+      <%= comment.author.name %> : <%= comment.text %><br>
+    <% end %>
+  </div>
+<% end %>

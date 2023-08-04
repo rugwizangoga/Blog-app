@@ -1,1 +1,39 @@
-<h1>Here is a list of posts by user <%=@user %> </h1>
+<div class="user">
+  <div class="photo">
+    <% if @user.photo.present? %>
+      <%= image_tag @user.photo, size: "100x100" %>
+    <% else %>
+      <%= image_tag "default-avatar.jpg", size: "100x100" %>
+    <% end %>
+  </div>
+  <div class="user-details">
+    <h3><%= @user.name %></h3>
+    <p class="user-posts">Number of Posts: <%= @user.posts.count %></p>
+  </div>
+</div>
+
+<div class="bio-posts">
+  <% @all_posts.each do |post| %>
+    <div class="recent-posts">
+    <%= link_to user_post_path(@user, post) do %>
+      <div class="bio com">
+        <h4 class = "p-bio">Post #<%=post.id%></h4>
+        <p class = "p-bio"><%= post.text %></p>
+        <p class = "user-posts">comments: <%= post.comments_counter %>,
+        Likes: <%= post.likes_counter %></p>
+      </div>
+      <% if post.five_most_recent_comments.any? %>
+      <div class="comments">
+        <h4 class = "p-bio">Comments</h4>
+        <% post.five_most_recent_comments.each do |comment| %>
+            <%= comment.author.name %> : <%= comment.text %> <br>
+        <% end %>
+      </div>
+      <% end %>
+    </div>
+    <% end %>
+  <% end %>
+</div>
+<button id="show-more-btn">
+<%= link_to 'Pagination'%>
+</button>
