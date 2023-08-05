@@ -52,7 +52,6 @@
 #show-more-btn {
   display: flex;
   padding: 8px 15px;
-  margin: 30px auto;
   background-color: #b4b4b4;
   font-size: 18px;
 }
@@ -71,4 +70,10 @@
   display: flex;
   justify-content: space-between;
   padding-right: 24px;
+}
+
+.add {
+  display: flex;
+  gap: 65px;
+  justify-content: center;
 }

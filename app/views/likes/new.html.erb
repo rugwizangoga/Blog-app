@@ -1,0 +1,4 @@
+<!-- likes/new.html.erb -->
+<%= form_with(model: [current_user, @like], url: user_post_likes_path(current_user, @post)) do |form| %>
+  <button id="show-more-btn"><%= form.submit "Like" %></button>
+<% end %>

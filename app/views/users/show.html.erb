@@ -24,9 +24,12 @@
       Likes: <%= post.likes_counter %></p>
     </div>
   <% end %>
+  <div class="add">
   <button id="show-more-btn">
     <%= link_to 'Show More', user_posts_path(@user) %>
   </button>
+  <button id="show-more-btn"><%= link_to "Create New Post", new_user_post_path(@user) %></button>
+  </div>
 <% else %>
   <p>No recent posts.</p>
 <% end %>
