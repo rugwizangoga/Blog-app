@@ -86,6 +86,12 @@ To run the project, execute the following commands:
 - GitHub: [@githubhandle](https://github.com/rugwizangoga)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/iradukunda-pacific-rugwizangoga)
 
+👤**Daniel Kigozi**
+
+- GitHub: [Daniel-Kigozi](https://github.com/Daniel-Kigozi)
+- Twitter: [@DanielKigozi15](https://twitter.com/@DanielKigozi15)
+- LinkedIn: [daniel-kigozi-375182208/](https://www.linkedin.com/in/daniel-kigozi-375182208/)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
