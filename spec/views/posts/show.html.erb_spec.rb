@@ -5,8 +5,8 @@ RSpec.feature 'Post Show Page', type: :feature do
   let(:post) { FactoryBot.create(:post, author: user) }
 
   before do
-    @comment1 = FactoryBot.create(:comment, post: post)
-    @comment2 = FactoryBot.create(:comment, post: post)
+    @comment1 = FactoryBot.create(:comment, post:)
+    @comment2 = FactoryBot.create(:comment, post:)
     visit user_post_path(user, post)
   end
 
