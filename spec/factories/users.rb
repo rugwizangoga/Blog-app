@@ -3,7 +3,7 @@
 FactoryBot.define do
   factory :user do
     name { Faker::Name.name }
-    photo { 'user_photo.png' }
+    photo { 'user_photo.avif' }
     bio { Faker::Lorem.paragraph }
     posts_counter { 0 }
 
