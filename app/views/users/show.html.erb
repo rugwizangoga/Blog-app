@@ -18,12 +18,14 @@
 </div>
 <% if @most_recent_posts.any? %>
   <% @most_recent_posts.each do |post| %>
-    <div class="bio">
-      <h4 class = "p-bio">Post #<%=post.id%></h4>
-      <p class = "p-bio"><%= post.text %></p>
-      <p class = "user-posts">comments: <%= post.comments_counter %>,
-      Likes: <%= post.likes_counter %></p>
-    </div>
+    <%= link_to user_post_path(@user, post) do %>
+      <div class="bio">
+        <h4 class = "p-bio">Post #<%=post.id%></h4>
+        <p class = "p-bio"><%= post.text %></p>
+        <p class = "user-posts">comments: <%= post.comments_counter %>,
+        Likes: <%= post.likes_counter %></p>
+      </div>
+    <% end %>
   <% end %>
   <div class="add">
   <button id="show-more-btn">

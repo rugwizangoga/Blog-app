@@ -41,5 +41,13 @@ RSpec.describe 'User Show Page', type: :feature do
       click_link 'Show More'
       expect(page).to have_current_path(user_posts_path(@user))
     end
+
+    it 'redirects to the clicked post\'s show page when clicking on a post' do
+      post_to_click = @most_recent_posts.first
+      click_link "Post ##{post_to_click.id}" # Assuming the link text follows this format
+    
+      expect(current_path).to eq(user_post_path(@user, post_to_click))
+    end
+    
   end
 end

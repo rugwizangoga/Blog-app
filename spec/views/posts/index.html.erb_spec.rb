@@ -23,4 +23,16 @@ RSpec.feature 'User Post Index Page', type: :feature do
     click_link "Post ##{first_post.id}"
     expect(page).to have_current_path(user_post_path(user, first_post))
   end
+
+  scenario "can see a post's title, first comments, and number of likes" do
+    first_post = user.posts.first
+
+    expect(page).to have_content(first_post.title)
+    expect(page).to have_content(first_post.comments.first.text)
+    expect(page).to have_content("Likes: #{first_post.likes_counter}")
+  end
+
+  scenario 'can see a section for pagination' do
+    expect(page).to have_css('.pagination')
+  end
 end

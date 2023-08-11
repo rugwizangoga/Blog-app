@@ -19,6 +19,7 @@
     <%= link_to user_post_path(@user, post) do %>
       <div class="bio com">
         <h4 class = "p-bio">Post #<%=post.id%></h4>
+        <h4 class = "p-bio"><%=post.title%></h4>
         <p class = "p-bio"><%= post.text %></p>
         <p class = "user-posts">comments: <%= post.comments_counter %>,
         Likes: <%= post.likes_counter %></p>
@@ -35,6 +36,6 @@
     <% end %>
   <% end %>
 </div>
-<button id="show-more-btn">
+<button class="pagination">
 <%= link_to 'Pagination'%>
 </button>

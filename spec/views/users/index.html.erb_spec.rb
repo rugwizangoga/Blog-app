@@ -13,4 +13,10 @@ RSpec.describe 'User Index Page', type: :feature do
       expect(page).to have_css('.user-posts', text: "Number of Posts: #{user.posts.count}")
     end
   end
+
+  it 'redirects to user show page when a user is clicked' do
+    user = @users_with_posts.first
+    click_link user.name
+    expect(current_path).to eq(user_path(user))
+  end
 end

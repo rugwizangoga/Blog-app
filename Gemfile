@@ -63,6 +63,7 @@ group :test do
   gem 'rails-controller-testing'
   gem 'rspec-rails'
   gem 'shoulda-matchers'
+  gem 'selenium-webdriver'
 end
 
 group :development do
