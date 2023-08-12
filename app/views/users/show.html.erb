@@ -4,7 +4,7 @@
     <% if @user.photo.present? %>
     <%= image_tag @user.photo, size: "100x100" %>
     <% else %>
-    <%= image_tag "default-avatar.jpg", size: "100x100" %>
+    <%= image_tag "user_photo.avif", size: "100x100" %>
     <% end %>
   </div>
   <div class="user-details">
@@ -27,12 +27,12 @@
       </div>
     <% end %>
   <% end %>
-  <div class="add">
+<% else %>
+  <p>No recent posts.</p>
+<% end %>
+<div class="add">
   <button id="show-more-btn">
     <%= link_to 'Show More', user_posts_path(@user) %>
   </button>
   <button id="show-more-btn"><%= link_to "Create New Post", new_user_post_path(@user) %></button>
   </div>
-<% else %>
-  <p>No recent posts.</p>
-<% end %>

@@ -77,3 +77,46 @@
   gap: 65px;
   justify-content: center;
 }
+
+.log {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 120px auto;
+  gap: 24px;
+}
+
+form {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 18px;
+  align-items: center;
+}
+
+.field,
+.actions {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.field input {
+  width: 100%;
+  padding: 15px 8px;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 3px;
+}
+
+.fields {
+  align-self: flex-start;
+}
+
+.actions input {
+  width: 100%;
+  background-color: rgb(193, 212, 235);
+  padding: 13px 0;
+  font-size: 18px;
+}
